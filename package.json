@@ -1,0 +1,16 @@
+﻿{
+ "name": "TreasureIsland",
+ "title": "Treasure Island",
+ "description": "Treasure Island game by Richard Erwin",
+ "author": {
+    "name": "Jared Erwin",
+    "email": "jared.erwin@gmail.com"
+    },
+ "version": "0.1.0",
+ "engines": {
+    "node": "0.8.x"
+    },
+ "dependencies": {
+    "express": "4.x"
+    }
+ }
