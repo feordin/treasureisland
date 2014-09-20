@@ -3,6 +3,10 @@
   "description": "Treasure Island game by Richard Erwin",
   "version": "0.0.1",
   "private": true,
+  "main":  "app.js",
+  "engines": {
+      "node": ">= 0.8.19"
+  },
   "dependencies": {
       "express": "4.x"
   }
