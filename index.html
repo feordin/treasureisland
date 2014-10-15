@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Treasure Island</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+<body>
+    <h1>Treasure Island</h1>
+    <ul id="sent"></ul>
+    <ul id="received"></ul>
+    <form action="">
+        <input id="m" autocomplete="off" /><button id="b">Send</button>
+    </form>
+    
+    <script>
+        var socket = io();
+        $('#b').click(function(){
+            socket.emit('chat message', $('#m').val());
+            $('#sent').append($('<li>').text($('#m').val()));
+            $('#m').val('');
+            return false;
+        });
+
+        socket.on('chat message', function (msg) {
+            $('#received').append($('<li>').text(msg));
+        });
+    </script>
+</body>
+</html>
